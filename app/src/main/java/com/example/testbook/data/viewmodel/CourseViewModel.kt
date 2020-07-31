@@ -7,10 +7,9 @@ import androidx.paging.PagedList
 import com.example.testbook.data.DataManager
 import com.example.testbook.data.DataSourceFactory
 import com.example.testbook.data.model.Class
-import com.example.testbook.data.model.Data
 
 class CourseViewModel : ViewModel() {
-    var userPagedList: LiveData<PagedList<Class>>
+    var coursePagedList: LiveData<PagedList<Class>>
     private var liveDataManager: LiveData<DataManager>
     init {
         val itemDataSourceFactory = DataSourceFactory()
@@ -19,7 +18,7 @@ class CourseViewModel : ViewModel() {
             .setEnablePlaceholders(false)
             .setPageSize(1)
             .build()
-        userPagedList = LivePagedListBuilder(itemDataSourceFactory, config)
+        coursePagedList = LivePagedListBuilder(itemDataSourceFactory, config)
             .build()
     }
 }

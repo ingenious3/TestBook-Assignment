@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/margin4"
+    android:layout_margin="@dimen/margin4"
+    card_view:cardCornerRadius="@dimen/margin4">
+
+    <RelativeLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkBlue">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTbSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim48dp"
+            android:layout_margin="@dimen/margin16"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_tb_select_title"/>
+
+        <LinearLayout
+            android:id="@+id/startIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin16"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/white_rectangle">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim24dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_clock"
+                android:layout_margin="@dimen/margin12" />
+
+            <TextView
+                android:id="@+id/startInText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text16"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/margin12"
+                android:layout_marginTop="@dimen/margin12"
+                android:layout_marginBottom="@dimen/margin12"
+                tools:text="Starts in N days" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFaculty"
+            android:layout_width="@dimen/dim400dp"
+            android:layout_height="@dimen/dim200dp"
+            android:layout_margin="@dimen/margin16"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/courseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text24"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_below="@id/imgTbSelect"
+            android:maxLength="100"
+            tools:text="Course 1 " />
+
+        <LinearLayout
+            android:id="@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginBottom="@dimen/margin16"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim24dp"
+                android:src="@drawable/ic_note"
+                android:layout_margin="@dimen/margin8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text18"
+                android:textColor="@color/colorWhite"
+                android:text="@string/_0_notes"
+                android:layout_margin="@dimen/margin8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@id/notes">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim24dp"
+                android:src="@drawable/ic_ques"
+                android:layout_margin="@dimen/margin8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/quesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text18"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="@dimen/margin8"
+                android:text="@string/_0_questions"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@id/ques">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim24dp"
+                android:src="@drawable/ic_video"
+                android:layout_margin="@dimen/margin8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/videosText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text18"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="@dimen/margin8"
+                android:text="@string/_0_videos" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
